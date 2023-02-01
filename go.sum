@@ -503,8 +503,6 @@ github.com/opencontainers/runtime-spec v1.0.3-0.20210326190908-1c3f411f0417/go.m
 github.com/opencontainers/selinux v1.10.0 h1:rAiKF8hTcgLI3w0DHm6i0ylVVcOrlgR1kK99DRLDhyU=
 github.com/opencontainers/selinux v1.10.0/go.mod h1:2i0OySw99QjzBBQByd1Gr9gSjvuho1lHsJxIJ3gGbJI=
 github.com/opentracing/opentracing-go v1.1.0/go.mod h1:UkNAQd3GIcIGf0SeVgPpRdFStlNbqXla1AfSYxPUl2o=
-github.com/oracle/oci-go-sdk/v50 v50.1.0 h1:6WyLNxEmnUuc1fYYVTuIeH2iQiGVdwlE//qSuYF7bK4=
-github.com/oracle/oci-go-sdk/v50 v50.1.0/go.mod h1:5tboHcoGIrAUerGgH3Sdc6eJdhw5YyywE78g99hzHpw=
 github.com/oracle/oci-go-sdk/v65 v65.28.3 h1:LOuUI2gf0Q2ygrWFBjE14dWYExvZu/Wq5IuXE2vx56s=
 github.com/oracle/oci-go-sdk/v65 v65.28.3/go.mod h1:oyMrMa1vOzzKTmPN+kqrTR9y9kPA2tU1igN3NUSNTIE=
 github.com/pascaldekloe/goe v0.0.0-20180627143212-57f6aae5913c/go.mod h1:lzWF7FIEvWOWxwDKqyGYQf6ZUaNfKdP144TG7ZOy1lc=

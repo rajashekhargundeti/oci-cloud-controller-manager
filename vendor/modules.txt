@@ -221,16 +221,16 @@ github.com/opencontainers/go-digest
 github.com/opencontainers/selinux/go-selinux
 github.com/opencontainers/selinux/pkg/pwalk
 github.com/opencontainers/selinux/pkg/pwalkdir
-# github.com/oracle/oci-go-sdk/v50 v50.1.0
+# github.com/oracle/oci-go-sdk/v65 v50.1.0
 ## explicit; go 1.13
-github.com/oracle/oci-go-sdk/v50/common
-github.com/oracle/oci-go-sdk/v50/common/auth
-github.com/oracle/oci-go-sdk/v50/core
-github.com/oracle/oci-go-sdk/v50/filestorage
-github.com/oracle/oci-go-sdk/v50/identity
-github.com/oracle/oci-go-sdk/v50/loadbalancer
-github.com/oracle/oci-go-sdk/v50/monitoring
-github.com/oracle/oci-go-sdk/v50/networkloadbalancer
+github.com/oracle/oci-go-sdk/v65/common
+github.com/oracle/oci-go-sdk/v65/common/auth
+github.com/oracle/oci-go-sdk/v65/core
+github.com/oracle/oci-go-sdk/v65/filestorage
+github.com/oracle/oci-go-sdk/v65/identity
+github.com/oracle/oci-go-sdk/v65/loadbalancer
+github.com/oracle/oci-go-sdk/v65/monitoring
+github.com/oracle/oci-go-sdk/v65/networkloadbalancer
 # github.com/pelletier/go-toml v1.9.3
 ## explicit; go 1.12
 github.com/pelletier/go-toml
