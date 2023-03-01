@@ -1,0 +1,26 @@
+name: Publish Manifests
+
+on:
+  push:
+    # Build and publish artifacts for a release
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build:
+    name: Publish Manifests
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Make
+      run: VERSION=${{ github.ref }} make manifests
+    - name: Upload Manifests to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: ${{ github.ref }}/*
+#         asset_name: mything
+        tag: ${{ github.ref }}
+        overwrite: true
+        body: "This is my release text"
