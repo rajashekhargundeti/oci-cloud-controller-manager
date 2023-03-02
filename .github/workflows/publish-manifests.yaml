@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Make
-      run: VERSION=${{ github.ref_name }} make manifests
+      run: RELEASE=${{ github.ref_name }} make manifests
     - name: ls
       run: ls 
     - name: ls dir
