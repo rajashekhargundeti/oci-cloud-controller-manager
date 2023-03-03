@@ -9,6 +9,7 @@ on:
 jobs:
   build:
     name: Publish Manifests
+    permissions: write-all
     runs-on: ubuntu-latest
 
     steps:
@@ -19,16 +20,22 @@ jobs:
       run: ls 
     - name: ls dir
       run: ls ${{ github.ref_name }}/*.yaml
-    - name: Create Release
-      id: create_release
-      uses: shogo82148/actions-create-release@v1
+    # - name: Create Release
+    #   id: create_release
+    #   uses: shogo82148/actions-create-release@v1
+    - name: Get release
+      id: get_release
+      uses: bruceadams/get-release@v1.3.2
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
       
     - name: print url
-      run: echo ${{ steps.create_release.outputs.upload_url }}
+      run: echo ${{ steps.get_release.outputs.upload_url }}
+
     - uses: shogo82148/actions-upload-release-asset@v1
       with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ${{ github.ref_name }}/*.yaml  
+        upload_url: ${{ steps.get_release.outputs.upload_url }}
+        asset_path: ${{ github.ref_name }}/*.yaml
 #     - name: Upload Manifests to release
 #       uses: svenstaro/upload-release-action@v2
 #       with:
