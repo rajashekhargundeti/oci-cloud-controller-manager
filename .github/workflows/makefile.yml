@@ -16,14 +16,20 @@ jobs:
         id: go
 
       - name: Check out code into the Go module directory
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Run Unit Tests
-        run: |
-          go test -covermode=count -coverprofile=profile.cov ./pkg/...
-      - name: Send coverage
-        env:
-          COVERALLS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          GO111MODULE=off go get github.com/mattn/goveralls
-          $(go env GOPATH)/bin/goveralls -coverprofile=profile.cov -service=github
+      - name: Make manifests
+        run: RELEASE=v1.25.2 make manifests
+
+      - name: ls
+        run: ls ${RELEASE}    
+
+      # - name: Run Unit Tests
+      #   run: |
+      #     go test -covermode=count -coverprofile=profile.cov ./pkg/...
+      # - name: Send coverage
+      #   env:
+      #     COVERALLS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   run: |
+      #     GO111MODULE=off go get github.com/mattn/goveralls
+      #     $(go env GOPATH)/bin/goveralls -coverprofile=profile.cov -service=github
