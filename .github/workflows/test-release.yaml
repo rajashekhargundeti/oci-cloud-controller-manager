@@ -28,3 +28,5 @@ jobs:
             - Second Change
           draft: false
           prerelease: false
+      - name: print url
+        run: echo ${{ steps.create_release.outputs.upload_url }}    
